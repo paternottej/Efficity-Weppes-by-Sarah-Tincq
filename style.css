@@ -43,7 +43,33 @@ body {
 .logo {
     max-width: 100%;
     height: auto;
-    width: 300px; /* Augmenté pour agrandir le logo */
+    width: 300px; /* Agrandit le logo */
+}
+
+/* Navigation dans le menu vertical */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff; /* Texte blanc pour le contraste */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #0033cc; /* Couleur de survol en bleu roi clair */
+    background-color: #ffffff; /* Fond blanc pour le survol */
 }
 
 /* Section héroïque */
