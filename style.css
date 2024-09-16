@@ -18,6 +18,8 @@ body {
 /* Conteneur principal */
 .container {
     display: flex;
+    flex-direction: row;
+    margin-left: 250px; /* Ajustement pour la largeur du menu */
 }
 
 /* Menu vertical */
@@ -75,7 +77,6 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 250px; /* Ajustement pour la largeur du menu */
     position: relative;
 }
 
@@ -120,7 +121,6 @@ nav ul li a:hover {
 /* Contenu principal */
 main {
     padding: 2rem;
-    margin-left: 250px; /* Ajustement pour la largeur du menu */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,4 +160,27 @@ input, textarea {
     padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
-   
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #E55B47;
+}
+
+/* Pied de page */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
