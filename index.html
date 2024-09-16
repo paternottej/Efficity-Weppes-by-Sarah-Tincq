@@ -1,168 +1,95 @@
-/* Réinitialisation de style pour tous les éléments */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseiller Immobilier dans les Weppes | Votre Expert Local</title>
+    <meta name="description" content="Expert immobilier dans les Weppes. Estimation gratuite, vente de biens et opportunités de carrière. Votre partenaire de confiance pour l'immobilier local. SANTES, HOUPLIN ANCOISNE, WAVRIN">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo Conseiller Immobilier" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#vendre">Vendre</a></li>
+                    <li><a href="#devenir-conseiller">Devenir Conseiller</a></li>
+                    <li><a href="#a-propos">À Propos</a></li>
+                    <li><a href="#contact">Contact : 06.08.51.53.29</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-/* Style de base */
-body {
-    font-family: Arial, sans-serif;
-    background: url('images/weppes-landscape.jpg') no-repeat center center/cover;
-    color: #333;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
+        <main>
+            <section id="accueil" class="hero">
+                <div class="hero-content">
+                    <h1>SARAH TINCQ</h1>
+                    <h2>Votre Expert Immobilier dans les Weppes</h2>
+                    <p>Des solutions sur mesure pour vos projets immobiliers</p>
+                    <a href="#vendre" class="cta-button">Estimer mon bien</a>
+                    <a href="#devenir-conseiller" class="cta-button">Devenir conseiller</a>
+                </div>
+            </section>
 
-/* Mise en page */
-.layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    min-height: 100vh;
-}
+            <section id="vendre" class="section">
+                <h2>Vendre Votre Bien</h2>
+                <p>Vous souhaitez vendre un bien immobilier ? Remplissez le formulaire ci-dessous pour une estimation gratuite et personnalisée.</p>
+                <form action="/submit-vendre" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone">
+                    
+                    <label for="adresse">Adresse du bien :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                    
+                    <label for="description">Description :</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                    
+                    <input type="submit" value="Envoyer">
+                </form>
+            </section>
 
-/* Menu vertical */
-.sidebar {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
+            <section id="devenir-conseiller" class="section">
+                <h2>Devenir Conseiller</h2>
+                <p>Vous souhaitez rejoindre notre équipe en tant que conseiller immobilier ? Complétez le formulaire ci-dessous pour nous envoyer votre candidature.</p>
+                <form action="/submit-conseiller" method="post">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone">
+                    
+                    <label for="cv">Télécharger votre CV :</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+                    
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <input type="submit" value="Envoyer">
+                </form>
+            </section>
 
-.logo-container {
-    text-align: center;
-    margin-bottom: 2rem;
-}
+            <section id="a-propos" class="section">
+                <h2>À Propos</h2>
+                <p>En savoir plus sur notre équipe et nos services.</p>
+            </section>
+        </main>
+    </div>
 
-.logo {
-    max-width: 100%;
-    height: auto;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 1.1em;
-}
-
-nav ul li a:hover {
-    color: #FFD700;
-}
-
-/* Section héroïque */
-.hero {
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    text-align: center;
-    padding: 4rem 1rem;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #FFD700;
-    color: #00008B;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #FFC700;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Sections générales */
-main {
-    padding: 2rem;
-    margin-left: 250px; /* Adjust this to account for the sidebar width */
-}
-
-/* Formulaires */
-form {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button, input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0047ab;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-button:hover, input[type="submit"]:hover {
-    background-color: #003580;
-}
-
-/* Pied de page */
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+    <footer>
+        <p>&copy; 2024 Votre Nom - Conseiller Immobilier dans les Weppes. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
