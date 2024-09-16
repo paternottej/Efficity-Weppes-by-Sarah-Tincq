@@ -1,172 +1,153 @@
-/* Réinitialisation de style pour tous les éléments */
+/* Réinitialisation de style de base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Style de base */
+/* Style général du corps */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    line-height: 1.6;
 }
 
-/* Conteneur principal */
-.container {
-    display: flex;
-    flex-direction: row;
-    margin-left: 250px; /* Ajustement pour la largeur du menu */
+/* Style de l'en-tête avec bannière */
+header {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Hauteur ajustée pour la bannière */
+    overflow: hidden;
 }
 
-/* Menu vertical */
-.sidebar {
-    background-color: #0033cc; /* Bleu roi pour le menu */
-    padding: 2rem;
-    width: 250px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
+header .banner {
+    width: 100%;
     height: 100%;
+    background: url('images/weppes-landscape.jpg') no-repeat center center/cover;
+}
+
+header .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+header .banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header .banner-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+header .banner-content p {
+    font-size: 1.2rem;
+}
+
+/* Style pour le menu latéral */
+.sidebar {
+    position: fixed;
     top: 0;
     left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #0047ab; /* Bleu roi */
+    color: white;
+    padding: 1rem;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.logo-container {
-    text-align: center;
+.sidebar .logo-container {
     margin-bottom: 2rem;
 }
 
-.logo {
-    max-width: 100%;
+.sidebar .logo-container .logo {
+    width: 180px; /* Agrandissement du logo */
     height: auto;
-    width: 300px; /* Agrandit le logo */
 }
 
-/* Bannière des Weppes */
-.banner {
-    background: url('images/weppes-landscape.jpg') no-repeat center center;
-    background-size: cover;
-    height: 4vh; /* Ajustez la hauteur selon vos besoins */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    margin-left: 250px; /* Pour s'assurer que la bannière commence après le menu */
 }
 
-/* Contenu de la bannière */
-.banner h1 {
-    font-size: 3rem; /* Ajustez la taille du texte */
+.sidebar nav ul li {
     margin-bottom: 1rem;
 }
 
-.banner h2 {
-    font-size: 1.5rem; /* Ajustez la taille du texte */
-}
-
-.banner p {
-    font-size: 1rem;
-    margin-top: 1rem;
-}
-
-/* Section héroïque (remplace la bannière précédente) */
-.hero {
-    background: #0033cc; /* Bleu roi comme couleur de fond */
-    color: #ffffff;
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
     text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #003d7a; /* Teinte plus foncée du bleu roi */
+}
+
+/* Style du contenu principal */
+.container {
+    margin-left: 250px; /* Décalage pour le menu latéral */
     padding: 2rem;
-    height: auto;
-    margin-left: 250px;
 }
 
-/* Contenu de la section héroïque */
-.hero-content {
-    position: relative;
-    z-index: 1;
+main {
+    padding: 2rem;
 }
 
-.hero h1 {
-    font-size: 4rem; /* Augmenté pour un effet plus marquant */
+main h2 {
+    font-size: 2rem;
+    color: #0047ab; /* Bleu roi */
     margin-bottom: 1rem;
-    color: #ffffff; /* Texte en blanc pour le contraste */
 }
 
-.hero h2 {
-    font-size: 2.5rem; /* Augmenté pour plus de visibilité */
-    margin-bottom: 1rem;
-    color: #ffcc00; /* Accent en or pour les sous-titres */
-}
-
-.hero p {
-    font-size: 1.5rem; /* Augmenté pour plus de lisibilité */
-    margin-bottom: 1.5rem;
-}
-
+/* Style des boutons CTA */
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
-    margin: 10px;
-    background-color: #0033cc; /* Bleu roi pour les boutons */
-    color: #ffffff;
+    margin: 10px 0;
+    background-color: #0047ab; /* Bleu roi */
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #002a8a; /* Teinte plus foncée de bleu pour le survol */
+    background-color: #003d7a; /* Teinte plus foncée du bleu roi */
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenu principal */
-main {
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-/* Sections générales */
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #0033cc; /* Bleu roi pour les titres de sections */
-    margin-bottom: 1rem;
-}
-
-/* Formulaires */
+/* Style des formulaires */
 form {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
     max-width: 600px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: #333;
+    margin: 0 auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -174,22 +155,23 @@ input, textarea {
 
 button {
     padding: 10px 20px;
-    background-color: #0033cc; /* Bleu roi pour les boutons */
+    background-color: #0047ab; /* Bleu roi */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #002a8a; /* Teinte plus foncée de bleu pour le survol */
+    background-color: #003d7a; /* Teinte plus foncée du bleu roi */
 }
 
-/* Pied de page */
+/* Style du pied de page */
 footer {
-    background-color: #0033cc; /* Bleu roi pour le pied de page */
+    background-color: #0047ab; /* Bleu roi */
     color: white;
     padding: 1rem;
     text-align: center;
+    margin-top: 2rem;
 }
