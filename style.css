@@ -46,46 +46,47 @@ body {
     width: 300px; /* Agrandit le logo */
 }
 
-/* Navigation dans le menu vertical */
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Bannière des Weppes */
+.banner {
+    background: url('images/weppes-landscape.jpg') no-repeat center center;
+    background-size: cover;
+    height: 40vh; /* Ajustez la hauteur selon vos besoins */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    margin-left: 250px; /* Pour s'assurer que la bannière commence après le menu */
 }
 
-nav ul li {
+/* Contenu de la bannière */
+.banner h1 {
+    font-size: 3rem; /* Ajustez la taille du texte */
     margin-bottom: 1rem;
 }
 
-nav ul li a {
-    display: block;
-    color: #ffffff; /* Texte blanc pour le contraste */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 1.1em;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+.banner h2 {
+    font-size: 1.5rem; /* Ajustez la taille du texte */
 }
 
-nav ul li a:hover {
-    color: #0033cc; /* Couleur de survol en bleu roi clair */
-    background-color: #ffffff; /* Fond blanc pour le survol */
+.banner p {
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
-/* Section héroïque */
+/* Section héroïque (remplace la bannière précédente) */
 .hero {
-    background: url('images/weppes-landscape.jpg') no-repeat center center;
-    background-size: cover;
+    background: #0033cc; /* Bleu roi comme couleur de fond */
     color: #ffffff;
     text-align: center;
-    padding: 4rem 2rem;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+    padding: 2rem;
+    height: auto;
+    margin-left: 250px;
 }
 
+/* Contenu de la section héroïque */
 .hero-content {
     position: relative;
     z-index: 1;
