@@ -38,7 +38,7 @@
             <section id="vendre" class="section">
                 <h2>Vendre Votre Bien</h2>
                 <p>Vous souhaitez vendre un bien immobilier ? Remplissez le formulaire ci-dessous pour une estimation gratuite et personnalisée.</p>
-                <form action="/submit-vendre" method="post">
+                <form action="send-vendre.php" method="post">
                     <label for="nom">Nom :</label>
                     <input type="text" id="nom" name="nom" required>
                     
@@ -61,7 +61,7 @@
             <section id="devenir-conseiller" class="section">
                 <h2>Devenir Conseiller</h2>
                 <p>Vous souhaitez rejoindre notre équipe en tant que conseiller immobilier ? Complétez le formulaire ci-dessous pour nous envoyer votre candidature.</p>
-                <form action="/submit-conseiller" method="post">
+                <form action="send-conseiller.php" method="post" enctype="multipart/form-data">
                     <label for="nom">Nom :</label>
                     <input type="text" id="nom" name="nom" required>
                     
