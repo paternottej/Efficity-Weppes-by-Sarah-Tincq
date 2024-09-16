@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $adresse = htmlspecialchars($_POST['adresse']);
     $description = htmlspecialchars($_POST['description']);
 
-    $to = "votre-email@example.com"; // Remplacez par votre adresse e-mail
+    $to = "paternottej@gmail.com"; // Adresse e-mail du destinataire
     $subject = "Demande d'estimation de bien";
     $message = "Nom: $nom\nEmail: $email\nTéléphone: $telephone\nAdresse du bien: $adresse\nDescription: $description";
     $headers = "From: $email";
