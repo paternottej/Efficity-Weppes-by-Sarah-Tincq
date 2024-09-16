@@ -15,26 +15,21 @@ body {
     min-height: 100vh;
 }
 
-/* Mise en page principale */
-.layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 1rem;
+/* Conteneur principal */
+.container {
+    display: flex;
 }
 
 /* Menu vertical */
 .sidebar {
     background-color: #ffffff;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 250px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     height: 100%;
     top: 0;
     left: 0;
-    width: 250px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
@@ -80,7 +75,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 250px;
+    margin-left: 250px; /* Ajustement pour la largeur du menu */
     position: relative;
 }
 
@@ -122,16 +117,17 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Sections générales */
+/* Contenu principal */
 main {
     padding: 2rem;
-    margin-left: 250px;
+    margin-left: 250px; /* Ajustement pour la largeur du menu */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
-/* Sections */
+/* Sections générales */
 section {
     margin-bottom: 2rem;
 }
