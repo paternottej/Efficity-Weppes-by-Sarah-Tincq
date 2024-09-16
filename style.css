@@ -24,7 +24,7 @@ body {
 
 /* Menu vertical */
 .sidebar {
-    background-color: #ffffff;
+    background-color: #0033cc; /* Bleu roi pour le menu */
     padding: 2rem;
     width: 250px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -55,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #ffffff; /* Texte en blanc pour contraste */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -63,14 +63,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FF6F61;
+    color: #ffcc00; /* Accent en or pour le survol */
 }
 
 /* Section héroïque */
 .hero {
     background: url('images/weppes-landscape.jpg') no-repeat center center;
     background-size: cover;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 4rem 2rem;
     height: 60vh;
@@ -88,11 +88,13 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #ffffff; /* Texte en blanc pour le contraste */
 }
 
 .hero h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: #ffcc00; /* Accent en or pour les sous-titres */
 }
 
 .hero p {
@@ -104,8 +106,8 @@ nav ul li a:hover {
     display: inline-block;
     padding: 12px 24px;
     margin: 10px;
-    background-color: #FF6F61;
-    color: #fff;
+    background-color: #0033cc; /* Bleu roi pour les boutons */
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
@@ -113,7 +115,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #E55B47;
+    background-color: #002a8a; /* Teinte plus foncée de bleu pour le survol */
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -134,13 +136,13 @@ section {
 
 section h2 {
     font-size: 2rem;
-    color: #333;
+    color: #0033cc; /* Bleu roi pour les titres de sections */
     margin-bottom: 1rem;
 }
 
 /* Formulaires */
 form {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -165,7 +167,7 @@ input, textarea {
 
 button {
     padding: 10px 20px;
-    background-color: #FF6F61;
+    background-color: #0033cc; /* Bleu roi pour les boutons */
     color: white;
     border: none;
     border-radius: 5px;
@@ -174,12 +176,12 @@ button {
 }
 
 button:hover {
-    background-color: #E55B47;
+    background-color: #002a8a; /* Teinte plus foncée de bleu pour le survol */
 }
 
 /* Pied de page */
 footer {
-    background-color: #1a1a1a;
+    background-color: #0033cc; /* Bleu roi pour le pied de page */
     color: white;
     padding: 1rem;
     text-align: center;
