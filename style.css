@@ -50,7 +50,7 @@ body {
 .banner {
     background: url('images/weppes-landscape.jpg') no-repeat center center;
     background-size: cover;
-    height: 40vh; /* Ajustez la hauteur selon vos besoins */
+    height: 4vh; /* Ajustez la hauteur selon vos besoins */
     width: 100%;
     display: flex;
     align-items: center;
