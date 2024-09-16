@@ -11,8 +11,8 @@ body {
     background: url('images/weppes-landscape.jpg') no-repeat center center/cover;
     color: #333;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Mise en page */
@@ -35,6 +35,8 @@ body {
     top: 0;
     left: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour le menu */
+    width: 250px; /* Largeur fixe pour le menu */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
 }
 
 .logo-container {
@@ -50,6 +52,7 @@ body {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -78,6 +81,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 250px; /* Ajustement pour la largeur du menu */
 }
 
 .hero h1 {
@@ -162,4 +166,13 @@ button, input[type="submit"] {
 button:hover, input[type="submit"]:hover {
     background-color: #E55B47; /* Couleur légèrement plus sombre pour le survol */
     transform: translateY(-2px);
+}
+
+/* Pied de page */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 3rem;
 }
