@@ -1,15 +1,18 @@
+/* Réinitialisation de style pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* En-tête */
 header {
     background-color: #1a1a1a;
     padding: 1rem 0;
@@ -18,6 +21,7 @@ header {
 nav ul {
     list-style: none;
     text-align: center;
+    padding: 0;
 }
 
 nav ul li {
@@ -31,6 +35,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Section héroïque */
 .hero-section {
     background: url('assets/logo.png') no-repeat center center/cover;
     height: 60vh;
@@ -39,10 +44,24 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 .hero-section h1 {
     font-size: 3rem;
+    margin: 0;
+    z-index: 1;
 }
 
 .hero-section .btn {
@@ -54,16 +73,33 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    z-index: 1;
 }
 
+.hero-section .btn:hover {
+    background-color: #003580;
+}
+
+/* Section générale */
 section {
     padding: 3rem 1rem;
     text-align: center;
 }
 
+/* Formulaires */
 form {
     max-width: 600px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 input, textarea {
@@ -74,19 +110,44 @@ input, textarea {
     border: 1px solid #ccc;
 }
 
-button {
+button, input[type="submit"] {
     padding: 10px 20px;
     background-color: #0047ab;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
+button:hover, input[type="submit"]:hover {
+    background-color: #003580;
+}
+
+/* Pied de page */
 footer {
     background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
     text-align: center;
     margin-top: 3rem;
+}
+
+/* Styles pour les sections supplémentaires */
+#vendre, #devenir-conseiller {
+    background-color: #f9f9f9;
+    padding: 3rem 1rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#vendre h2, #devenir-conseiller h2 {
+    font-size: 2rem;
+    color: #0047ab;
+    margin-bottom: 1rem;
+}
+
+#vendre p, #devenir-conseiller p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
