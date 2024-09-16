@@ -5,212 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conseiller Immobilier dans les Weppes | Votre Expert Local</title>
     <meta name="description" content="Expert immobilier dans les Weppes. Estimation gratuite, vente de biens et opportunités de carrière. Votre partenaire de confiance pour l'immobilier local. SANTES, HOUPLIN ANCOISNE, WAVRIN">
-    <style>
-        :root {
-            --primary-color: #00008B;
-            --secondary-color: #f8f9fa;
-            --accent-color: #FFD700;
-            --text-color: #333;
-        }
-        body, html {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        .layout {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            min-height: 100vh;
-        }
-        .sidebar {
-            background-color: var(--primary-color);
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-        .logo-container {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .logo {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 2rem;
-        }
-        nav ul li {
-            margin-bottom: 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 1.1em;
-        }
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-        main {
-            padding: 2rem;
-        }
-        .hero {
-            background: url('images/weppes-landscape.jpg') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding-left: 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(0, 0, 139, 0.7), rgba(0, 0, 139, 0.4));
-        }
-        .hero-content {
-            z-index: 1;
-            color: white;
-            max-width: 600px;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-right: 15px;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .cta-button:hover {
-            background-color: #FFC700;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .section {
-            padding: 4rem 0;
-        }
-        .section h2 {
-            font-size: 2.5em;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        .weppes-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .weppes-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .weppes-image:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        .testimonials, .stats {
-            background-color: var(--secondary-color);
-        }
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        @media (max-width: 768px) {
-            .layout {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                position: fixed;
-                width: 100%;
-                height: auto;
-                z-index: 1000;
-            }
-            main {
-                margin-top: 80px;
-            }
-            .hero {
-                padding-left: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="layout">
-        <aside class="sidebar">
-            <div class="logo-container">
-                <img src="images/logo.png" alt="Logo Conseiller Immobilier" class="logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#vendre">Vendre</a></li>
-                    <li><a href="#devenir-conseiller">Devenir Conseiller</a></li>
-                    <li><a href="#a-propos">À Propos</a></li>
-                    <li><a href="#contact">Contact : 06.08.51.53.29</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#vendre">Vendre</a></li>
+                <li><a href="#devenir-conseiller">Devenir Conseiller</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#contact">Contact : 06.08.51.53.29</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>SARAH TINCQ</h1>
-                    <h2>Votre Expert Immobilier dans les Weppes</h2>
-                    <p>Des solutions sur mesure pour vos projets immobiliers</p>
-                    <a href="#estimer" class="cta-button">Estimer mon bien</a>
-                    <a href="#devenir-conseiller" class="cta-button">Devenir conseiller</a>
-                </div>
-            </section>
+    <section id="accueil" class="hero-section">
+        <div>
+            <h1>SARAH TINCQ</h1>
+            <h2>Votre Expert Immobilier dans les Weppes</h2>
+            <p>Des solutions sur mesure pour vos projets immobiliers</p>
+            <a href="#vendre" class="btn">Estimer mon bien</a>
+            <a href="#devenir-conseiller" class="btn">Devenir conseiller</a>
+        </div>
+    </section>
 
-            <section class="section">
-                <h2>Découvrez les Weppes</h2>
-                <div class="weppes-gallery">
-                    <img src="images/weppes-landscape.jpg" alt="Paysage des Weppes" class="weppes-image">
-                    <!-- Vous pouvez ajouter d'autres images des Weppes ici -->
-                </div>
-            </section>
+    <section id="vendre" class="section">
+        <h2>Vendre Votre Bien</h2>
+        <p>Vous souhaitez vendre un bien immobilier ? Remplissez le formulaire ci-dessous pour une estimation gratuite et personnalisée.</p>
+        <form action="/submit-vendre" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone">
+            
+            <label for="adresse">Adresse du bien :</label>
+            <input type="text" id="adresse" name="adresse" required>
+            
+            <label for="description">Description :</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+            
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
 
-            <section class="section testimonials">
-                <h2>Témoignages</h2>
-                <!-- Ajoutez ici des témoignages de clients et conseillers -->
-            </section>
+    <section id="devenir-conseiller" class="section">
+        <h2>Devenir Conseiller</h2>
+        <p>Vous souhaitez rejoindre notre équipe en tant que conseiller immobilier ? Complétez le formulaire ci-dessous pour nous envoyer votre candidature.</p>
+        <form action="/submit-conseiller" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone">
+            
+            <label for="cv">Télécharger votre CV :</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
 
-            <section class="section stats">
-                <h2>Le marché immobilier dans les Weppes</h2>
-                <!-- Ajoutez ici des statistiques pertinentes -->
-            </section>
-        </main>
-    </div>
+    <section id="a-propos" class="section">
+        <h2>À Propos</h2>
+        <p>En savoir plus sur notre équipe et nos services.</p>
+    </section>
 
     <footer>
         <p>&copy; 2024 Votre Nom - Conseiller Immobilier dans les Weppes. Tous droits réservés.</p>
