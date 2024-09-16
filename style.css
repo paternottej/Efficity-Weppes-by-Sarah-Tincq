@@ -15,10 +15,11 @@ body {
     min-height: 100vh;
 }
 
-/* Mise en page */
+/* Mise en page principale */
 .layout {
     display: grid;
     grid-template-columns: 250px 1fr;
+    gap: 1rem;
     min-height: 100vh;
 }
 
@@ -37,6 +38,7 @@ body {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour le menu */
     width: 250px; /* Largeur fixe pour le menu */
     overflow-y: auto; /* Défilement vertical si nécessaire */
+    z-index: 1000;
 }
 
 .logo-container {
@@ -124,6 +126,7 @@ main {
     background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent pour les sections */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour les sections */
+    overflow: hidden; /* Pour éviter les débordements */
 }
 
 /* Formulaires */
