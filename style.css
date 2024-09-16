@@ -41,29 +41,9 @@ body {
 }
 
 .logo {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin-bottom: 1rem;
-}
-
-nav ul li a {
-    color: #ffffff; /* Texte en blanc pour contraste */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 1.1em;
-}
-
-nav ul li a:hover {
-    color: #ffcc00; /* Accent en or pour le survol */
+    width: 300px; /* Augmenté pour agrandir le logo */
 }
 
 /* Section héroïque */
@@ -86,19 +66,19 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Augmenté pour un effet plus marquant */
     margin-bottom: 1rem;
     color: #ffffff; /* Texte en blanc pour le contraste */
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Augmenté pour plus de visibilité */
     margin-bottom: 1rem;
     color: #ffcc00; /* Accent en or pour les sous-titres */
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Augmenté pour plus de lisibilité */
     margin-bottom: 1.5rem;
 }
 
