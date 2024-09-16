@@ -7,147 +7,169 @@
 
 /* Style de base */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('images/weppes-landscape.jpg') no-repeat center center/cover;
     color: #333;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-/* En-tête */
-header {
-    background-color: #1a1a1a;
-    padding: 1rem 0;
+/* Mise en page */
+.layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* Menu vertical */
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+    color: #333;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour le menu */
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
 }
 
 nav ul {
     list-style: none;
-    text-align: center;
     padding: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin-bottom: 1rem;
 }
 
 nav ul li a {
-    color: white;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #FF6F61; /* Couleur chaleureuse pour le survol */
 }
 
 /* Section héroïque */
-.hero-section {
-    background: url('assets/logo.png') no-repeat center center/cover;
-    height: 60vh;
+.hero {
+    background: rgba(0, 0, 0, 0.4); /* Couche semi-transparente pour améliorer la lisibilité du texte */
+    color: #fff;
     text-align: center;
-    color: white;
+    padding: 4rem 2rem;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
 }
 
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-
-.hero-section h1 {
+.hero h1 {
     font-size: 3rem;
-    margin: 0;
-    z-index: 1;
+    margin-bottom: 1rem;
 }
 
-.hero-section .btn {
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 10px;
-    background-color: #0047ab;
-    color: white;
+    padding: 12px 24px;
+    margin: 10px;
+    background-color: #FF6F61; /* Couleur chaude pour les boutons */
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    z-index: 1;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.hero-section .btn:hover {
-    background-color: #003580;
+.cta-button:hover {
+    background-color: #E55B47; /* Couleur légèrement plus sombre pour le survol */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Section générale */
-section {
-    padding: 3rem 1rem;
-    text-align: center;
+/* Sections générales */
+main {
+    padding: 2rem;
+    margin-left: 250px; /* Ajustement pour la largeur du menu */
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent pour les sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour les sections */
 }
 
 /* Formulaires */
 form {
-    max-width: 600px;
-    margin: 0 auto;
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #333;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    font-size: 1rem;
 }
 
 button, input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0047ab;
+    padding: 12px 24px;
+    background-color: #FF6F61; /* Couleur chaude pour le bouton de soumission */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #003580;
+    background-color: #E55B47; /* Couleur légèrement plus sombre pour le survol */
 }
 
 /* Pied de page */
 footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc légèrement transparent */
+    color: #333;
+    padding: 1rem;
     text-align: center;
-    margin-top: 3rem;
-}
-
-/* Styles pour les sections supplémentaires */
-#vendre, #devenir-conseiller {
-    background-color: #f9f9f9;
-    padding: 3rem 1rem;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-}
-
-#vendre h2, #devenir-conseiller h2 {
-    font-size: 2rem;
-    color: #0047ab;
-    margin-bottom: 1rem;
-}
-
-#vendre p, #devenir-conseiller p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
