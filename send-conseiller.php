@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cv_path = 'uploads/' . basename($cv['name']);
     move_uploaded_file($cv['tmp_name'], $cv_path);
 
-    $to = "votre-email@example.com"; // Remplacez par votre adresse e-mail
+    $to = "paternottej@gmail.com"; // Adresse e-mail du destinataire
     $subject = "Candidature pour Conseiller Immobilier";
     $email_message = "Nom: $nom\nEmail: $email\nTéléphone: $telephone\nMessage: $message\nCV: $cv_path";
     $headers = "From: $email";
